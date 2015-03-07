@@ -1,7 +1,44 @@
+/*This is the state of the document head*/
+head {
+	border:1px solid black;
+}
+
+/*This is the state of the body*/
 body {
     background-color: lightblue;
+	border:1px solid black;
 }
+
+/*This is the state of heading 1*/
 h1 {
     color: navy;
     margin-left: 20px;
+	border:1px solid black;
+}
+
+/*This is the state of the span class*/
+span {
+    color: navy;
+    margin-left: 20px;
+	border:1px solid black;
+}
+
+/*This is the button*/
+button {
+	border: solid #000000 2px;
+	padding:3px 5px 3px 5px;
+	margin:2px;
+	-webkit-border-radius: 6;
+	-moz-border-radius: 6;
+	
+}
+
+/*This is the state when you hover over a button*/
+button:hover {
+	background-color:#eee;
+}
+
+/*This is the state when the button is pressed*/
+button:active {
+	background-color:#eee;
 }
