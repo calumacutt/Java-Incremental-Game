@@ -1,13 +1,15 @@
-var myTimerDisplay;
-var myTimerReal;
-var clickspeed = 0;
+var MoneyDisplayTimer;
+var MoneyIncTimer;
+
+MoneyIncTimer = setInterval(function(){cookieIncrement()}, 10);
+MoneyDisplayTimer = setInterval(function(){cookieDisplay(cookies)}, 10);
+
 var cursorinitialcost = 10;
 var friendinitialcost = 100;
 var expgrowthconst = 1.1;
 var cookieincrementrate = 0; //increment rate in cookies/second
 
-myTimerReal = setInterval(function(){cookieIncrement()}, 10);
-myTimerDisplay = setInterval(function(){cookieDisplay(cookies)}, 10);
+
 
 var cookies = 0;
 
