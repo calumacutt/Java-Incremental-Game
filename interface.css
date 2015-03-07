@@ -40,5 +40,22 @@ button:hover {
 
 /*This is the state when the button is pressed*/
 button:active {
-	background-color:#eee;
+	background-color:#CFCFCF;
+}
+
+/*This is the first container definition that I am using. Just as a test*/
+#left_container{
+	float:left;
+	width:40%;
+	border:1px solid black;
+	margin:2px;
+}
+
+/*This is the first container definition that I am using. Just as a test*/
+/*Same as previous, just on the other side for testing*/
+#right_container{
+	float:right;
+	width:40%;
+	border:1px solid black;
+	margin:2px;
 }
