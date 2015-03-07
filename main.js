@@ -19,6 +19,15 @@ function buyCursor(){
     document.getElementById('cursorCost').innerHTML = nextCost;  //updates the cursor cost for the user
 };
 
+function save(){
+	var save = {
+		cookies: cookies,
+		cursors: cursors,
+		prestige: prestige
+	}
+	localStorage.setItem("save",JSON.stringify(save));
+}
+	
 window.setInterval(function(){
 	
 	cookieClick(cursors);
