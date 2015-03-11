@@ -2,7 +2,7 @@ var MoneyDisplayTimer;
 var MoneyIncTimer;
 
 MoneyIncTimer = setInterval(function(){MoneyInc()}, 10);
-MoneyDisplayTimer = setInterval(function(){MoneyDisplay(Money)}, 10);
+MoneyDisplayTimer = setInterval(function(){MoneyDisplay();MoneyRateDisplay();}, 10);
 
 var PennyHelpersIniCost = 10;
 var friendinitialcost = 100;
@@ -19,43 +19,50 @@ function MoneyDisplay(){
     document.getElementById("Money").innerHTML = Math.floor(Money);
 };
 
+function MoneyRateDisplay(){
+    document.getElementById("MoneyIncRate").innerHTML = Math.floor(MoneyIncRate);
+};
+
 function PennyClick(number){
 	Money = Money + number;
 }
 
-var PennyHelpers = 0;
+var ItemRateArray = {};
+ItemRateArray["PennyHelper"] = 1;
+ItemRateArray["SausageSizzle"] = 10;
+ItemRateArray["Banker"] = 100;
 
-function buyPennyHelpers(){
-    var PennyHelperCost = Math.floor(PennyHelpersIniCost * Math.pow(expgrowthconst,PennyHelpers));     //works out the cost of this cursor
-    if(Money >= PennyHelperCost){                                   //checks that the player can afford the cursor
-        PennyHelpers = PennyHelpers + 1;                                   //increases number of PennyHelpers
-    	Money = Money - PennyHelperCost;                          //removes the Money spent
-        document.getElementById('PennyHelpers').innerHTML = PennyHelpers;  //updates the number of PennyHelpers for the user
-		MoneyIncRate = MoneyIncRate + 1;
-    };
-    var nextCost = Math.floor(PennyHelpersIniCost * Math.pow(expgrowthconst,PennyHelpers));       //works out the cost of the next cursor
-    document.getElementById('PennyHelperCost').innerHTML = nextCost;  //updates the cursor cost for the user	
-};
+var ItemCostArray = {};
+ItemCostArray["PennyHelper"] = 10;
+ItemCostArray["SausageSizzle"] = 100;
+ItemCostArray["Banker"] = 1000;
 
-var friends = 0;
+var ItemCountArray = {};
+ItemCountArray["PennyHelper"] = 0;
+ItemCountArray["SausageSizzle"] = 0;
+ItemCountArray["Banker"] = 0;
 
-function buyFriend(){
+var ItemLabelArray = {};
+ItemLabelArray["PennyHelper"] = 'PennyHelperCost';
+ItemLabelArray["SausageSizzle"] = 'SausageSizzleCost';
+ItemLabelArray["Banker"] = 'BankerCost';
 
-    var friendCost = Math.floor(friendinitialcost * Math.pow(expgrowthconst,friends));     //works out the cost of this cursor
-    if(Money >= friendCost){                                   //checks that the player can afford the cursor
-        friends = friends + 1;                                   //increases number of PennyHelpers
-    	Money = Money - friendCost;                          //removes the Money spent
-        document.getElementById('friends').innerHTML = friends;  //updates the number of PennyHelpers for the user
-		MoneyIncRate = MoneyIncRate + 10;
-    };
-    var nextCost = Math.floor(friendinitialcost * Math.pow(expgrowthconst,friends));       //works out the cost of the next cursor
-    document.getElementById('friendCost').innerHTML = nextCost;  //updates the cursor cost for the user	
-};
-
-var RateIncArray = {};
-RateIncArray["PennyHelper"] = 1;
-RateIncArray["SausageSizzle"] = 10;
-
-function BuyRateIncrease(Item){
-
+function BuyItem(Item){
+	var ItemCost = Math.floor(ItemCostArray[Item] * Math.pow(expgrowthconst, ItemCountArray[Item]));
+	if(Money >= ItemCost){
+		ItemCountArray[Item] = ItemCountArray[Item] + 1;
+		Money = Money - ItemCost;
+		document.getElementById(Item).innerHTML = ItemCountArray[Item];
+		MoneyIncRate = MoneyIncRate + ItemRateArray[Item];
+	};
+	var nextCost = Math.floor(ItemCostArray[Item] * Math.pow(expgrowthconst, ItemCountArray[Item]));
+	document.getElementById(ItemLabelArray[Item]).innerHTML = nextCost;		
 }
+
+
+
+
+
+
+
+

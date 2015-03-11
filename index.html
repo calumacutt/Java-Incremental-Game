@@ -11,25 +11,26 @@
 	</title>
 	<body>
 		<div id='left_container'>
-			<button onclick="PennyClick(1)">Click Me!</button>
+			<button onclick="PennyClick(1)">Click For Money</button>
 			<br>
 			Money: <span id="Money">0</span>
 			<br>
-			<button onclick="buyPennyHelpers()">Buy Penny Helpers</button>
+			Money Per Second: <span id="MoneyIncRate">0</span>
 			<br>
-			<button onclick="buyFriend()">Buy Friend</button>
+			<button onclick="BuyItem('PennyHelper')">Buy Penny Helpers</button>
 			<br>
-			Penny Helpers: <span id="PennyHelpers">0</span>
+			<button onclick="BuyItem('SausageSizzle')">Buy Sausage Sizzle</button>
+			<br>
+			Penny Helpers: <span id="PennyHelper">0</span>
 			<br>
 			Penny Helper Cost: <span id="PennyHelperCost">10</span>
 			<br>
-			Friend: <span id="friends">0</span>
+			Sausage Sizzle: <span id="SausageSizzle">0</span>
 			<br>
-			Friend Cost: <span id="friendCost">100</span>
+			Sausage Sizzle Cost: <span id="SausageSizzleCost">100</span>
 			<br>
-			Test Space: <span id="testSpace">default</span>
 		</div>
-		<div id='left_container'>
+		<div id='middle_container'>
 			<h2>Horizontal List</h2>
 			<ul id="menu">
 				 <li>tab 1</li>
@@ -38,5 +39,8 @@
 				 <li>tab 4</li>
 			</ul> 
 		</div>
+		<div id='right_container'>
+			<h2>Horizontal List</h2>
+		</div>	
 	</body>
 </html>

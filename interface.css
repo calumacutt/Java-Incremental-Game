@@ -8,7 +8,7 @@ html, body {
 body {
     background-color: lightblue;
 	border:1px solid black;
-	margin:8px
+	margin:0px
 	height: 100%;
 	min-height: 100%; /* for firefox */
 }
@@ -41,10 +41,25 @@ button:active {
 /*This is the first container definition that I am using. Just as a test*/
 #left_container{
 	float:left;
-	width:40%;
+	width:20%;
 	border:1px solid black;
-	margin:2px;
+	margin:0px;
 }
+
+#middle_container{
+	float:left;
+	width:59%;
+	/*border:1px solid black;*/
+	margin:0px;
+}
+
+#right_container{
+	float:right;
+	width:20%;
+	border:1px solid black;
+	margin:0px;
+}
+
 
 /*This changes the settings for the unordered list (ul), with the ID:'menu'*/
 ul#menu {
