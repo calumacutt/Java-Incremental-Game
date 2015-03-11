@@ -14,12 +14,7 @@ body {
 	height:100%;
 	width:100%;
     background-color: lightblue;
-<<<<<<< HEAD
-	border:1px solid black;
 	margin:0px
-	height: 100%;
-=======
->>>>>>> origin/master
 	min-height: 100%; /* for firefox */
 	overflow:hidden;
 }
@@ -49,30 +44,6 @@ button:active {
 	background-color:#CFCFCF;
 }
 
-/*This is the first container definition that I am using. Just as a test*/
-#left_container{
-	position:absolute;
-	float:left;
-	width:20%;
-	border:1px solid black;
-	margin:0px;
-}
-
-#middle_container{
-	float:left;
-	width:59%;
-	/*border:1px solid black;*/
-	margin:0px;
-}
-
-#right_container{
-	float:right;
-	width:20%;
-	border:1px solid black;
-	margin:0px;
-}
-
-
 /*This changes the settings for the unordered list (ul), with the ID:'menu'*/
 ul#menu {
     padding: 0;
@@ -101,16 +72,10 @@ div#top_bar {
 	width:100%;
 	height:30px;
 	background-color:#000000;
-}
-
-/*This is the style of the text in the top_bar*/
-#topBar div
-{
-	margin:6px 8px;
 	color:white;
 }
 
-
+ 
 div#game {
 	position:absolute;
 	left:0px;
@@ -128,7 +93,6 @@ div#left_container {
 	bottom:0px;
 	min-width:100px;
 	overflow:hidden;
-	border:1px solid black;
 }
 
 div#middle_container {
@@ -139,16 +103,14 @@ div#middle_container {
 	bottom:0px;
 	min-width:100px;
 	overflow:hidden;
-	border:1px solid black;
 }
 
 div#right_container {
 	position:absolute;
 	left:70%;
 	top:0px;
-	width:29%;
+	width:30%;
 	bottom:0px;
 	min-width:100px;
 	overflow:hidden;
-	border:1px solid black;
 }
