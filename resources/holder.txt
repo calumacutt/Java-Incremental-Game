@@ -1,3 +1,0 @@
-Just a file so that the resources folder will commit.
-
-Delete this as soon as something is put in here.
