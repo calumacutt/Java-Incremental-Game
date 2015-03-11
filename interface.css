@@ -1,26 +1,21 @@
-/*This is the state of the document head*/
-head {
-	border:1px solid black;
+/*Fixes the body of the code from breaking in HTML 5*/
+html, body {
+  height: 100%;
 }
 
 /*This is the state of the body*/
+/*This is the black box around the whole document*/
 body {
     background-color: lightblue;
 	border:1px solid black;
-}
-
-/*This is the state of heading 1*/
-h1 {
-    color: navy;
-    margin-left: 20px;
-	border:1px solid black;
+	margin:8px
+	height: 100%;
+	min-height: 100%; /* for firefox */
 }
 
 /*This is the state of the span class*/
 span {
-    color: navy;
-    margin-left: 20px;
-	border:1px solid black;
+    color: black;
 }
 
 /*This is the button*/
@@ -28,14 +23,14 @@ button {
 	border: solid #000000 2px;
 	padding:3px 5px 3px 5px;
 	margin:2px;
-	-webkit-border-radius: 6;
-	-moz-border-radius: 6;
-	
+	border-radius: 6px;
 }
 
 /*This is the state when you hover over a button*/
 button:hover {
 	background-color:#eee;
+	padding:2px 4px 2px 4px;
+	margin:3px
 }
 
 /*This is the state when the button is pressed*/
@@ -51,11 +46,22 @@ button:active {
 	margin:2px;
 }
 
-/*This is the first container definition that I am using. Just as a test*/
-/*Same as previous, just on the other side for testing*/
-#right_container{
-	float:right;
-	width:40%;
-	border:1px solid black;
-	margin:2px;
+/*This changes the settings for the unordered list (ul), with the ID:'menu'*/
+ul#menu {
+    padding: 0;
+}
+
+/*Changes the style of the list element inside ul#menu*/
+ul#menu li {
+    display: inline;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+/*Changes the style of the list elements */
+ul#menu li:hover {
+    background-color: orange;
 }

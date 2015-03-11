@@ -1,12 +1,19 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 	<head>
 		<link rel="stylesheet" type="text/css" href="interface.css" />
+		<script type="text/javascript" src="main.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<meta charset="UTF-8">
 	</head>
+	<title>
+	Clicker App
+	</title>
 	<body>
 		<div id='left_container'>
 			<button onclick="PennyClick(1)">Click Me!</button>
 			<br>
-			Money:<span id="Money">0</span>
+			Money: <span id="Money">0</span>
 			<br>
 			<button onclick="buyPennyHelpers()">Buy Penny Helpers</button>
 			<br>
@@ -21,12 +28,15 @@
 			Friend Cost: <span id="friendCost">100</span>
 			<br>
 			Test Space: <span id="testSpace">default</span>
-			
-			<script type="text/javascript" src="main.js"></script>
-			
 		</div>
-		<div id='right_container'>
-			<button>THIS IS A TEST BUTTON</button>
+		<div id='left_container'>
+			<h2>Horizontal List</h2>
+			<ul id="menu">
+				 <li>tab 1</li>
+				 <li>tab 2</li>
+				 <li>tab 3</li>
+				 <li>tab 4</li>
+			</ul> 
 		</div>
 	</body>
 </html>
