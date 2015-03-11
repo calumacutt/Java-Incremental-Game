@@ -1,16 +1,21 @@
 /*Fixes the body of the code from breaking in HTML 5*/
-html, body {
-  height: 100%;
+html, body, div {
+  	margin:0;
+	padding:0;
+	border:0;
+	font-size: 100%;
+	font:inherit;
+	vertical-align:baseline;
 }
 
 /*This is the state of the body*/
 /*This is the black box around the whole document*/
 body {
+	height:100%;
+	width:100%;
     background-color: lightblue;
-	border:1px solid black;
-	margin:8px
-	height: 100%;
 	min-height: 100%; /* for firefox */
+	overflow:hidden;
 }
 
 /*This is the state of the span class*/
@@ -40,6 +45,7 @@ button:active {
 
 /*This is the first container definition that I am using. Just as a test*/
 #left_container{
+	position:absolute;
 	float:left;
 	width:40%;
 	border:1px solid black;
@@ -64,4 +70,53 @@ ul#menu li {
 /*Changes the style of the list elements */
 ul#menu li:hover {
     background-color: orange;
+}
+
+/*This is the style of the bar at the top of the page*/
+div#top_bar {
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:100%;
+	height:30px;
+	background-color:#000000;
+}
+
+/*This is the style of the text in the top_bar*/
+#topBar div
+{
+	margin:6px 8px;
+	color:white;
+}
+
+
+div#game {
+	position:absolute;
+	left:0px;
+	top:32px;
+	right:0px;
+	bottom:0px;
+	overflow:hidden;
+}
+
+div#left_container {
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:30%;
+	bottom:0px;
+	min-width:100px;
+	overflow:hidden;
+	border:1px solid black;
+}
+
+div#middle_container {
+	position:absolute;
+	left:30%;
+	top:0px;
+	width:40%;
+	bottom:0px;
+	min-width:100px;
+	overflow:hidden;
+	border:1px solid black;
 }
