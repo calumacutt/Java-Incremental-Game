@@ -141,3 +141,14 @@ div#middle_container {
 	overflow:hidden;
 	border:1px solid black;
 }
+
+div#right_container {
+	position:absolute;
+	left:70%;
+	top:0px;
+	width:29%;
+	bottom:0px;
+	min-width:100px;
+	overflow:hidden;
+	border:1px solid black;
+}
