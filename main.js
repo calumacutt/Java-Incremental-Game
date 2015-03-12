@@ -59,7 +59,14 @@ function BuyItem(Item){
 	document.getElementById(ItemLabelArray[Item]).innerHTML = nextCost;		
 }
 
-
+//Opens and closes the 'donate' tab//
+function donate(){
+	if (document.getElementById('donate').style.display == 'block'){
+		document.getElementById('donate').style.display = 'none';
+	} else {
+		document.getElementById('donate').style.display = 'block';
+	}
+}
 
 
 

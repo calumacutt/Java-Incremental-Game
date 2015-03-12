@@ -1,5 +1,5 @@
 /*Fixes the body of the code from breaking in HTML 5*/
-html, body, div {
+html, body, div, a, ul {
   	margin:0;
 	padding:0;
 	border:0;
@@ -46,7 +46,6 @@ button:active {
 
 /*This changes the settings for the unordered list (ul), with the ID:'menu'*/
 ul#menu {
-    padding: 0;
 }
 
 /*Changes the style of the list element inside ul#menu*/
@@ -54,7 +53,6 @@ ul#menu li {
     display: inline;
     background-color: black;
     color: white;
-    padding: 10px 20px;
     text-decoration: none;
     border-radius: 6px;
 }
@@ -75,16 +73,15 @@ div#top_bar {
 	color:white;
 }
 
- 
+/*This is the element that contains everything except the top box*/
 div#game {
 	position:absolute;
-	left:0px;
-	top:32px;
-	right:0px;
+	width:100%;
+	top:30px;
 	bottom:0px;
-	overflow:hidden;
 }
 
+/*The left container holds the store and items like that*/
 div#left_container {
 	position:absolute;
 	left:0px;
@@ -93,8 +90,10 @@ div#left_container {
 	bottom:0px;
 	min-width:100px;
 	overflow:hidden;
+	background:green;
 }
 
+/*The middle container is the big one with most of the game in it*/
 div#middle_container {
 	position:absolute;
 	left:30%;
@@ -103,8 +102,10 @@ div#middle_container {
 	bottom:0px;
 	min-width:100px;
 	overflow:hidden;
+	background:grey;
 }
 
+/*The right container doesnt have much in it at the moment*/
 div#right_container {
 	position:absolute;
 	left:70%;
@@ -113,4 +114,21 @@ div#right_container {
 	bottom:0px;
 	min-width:100px;
 	overflow:hidden;
+	background:blue;
+}
+
+#donate{
+	display:none;
+	position:absolute;
+	top:0;
+	right:0;
+	border:1px solid black;
+	background-color:white;
+	z-index:2;
+	padding:5px;
+	text-align:middle;
+}
+
+#donate p{
+	color:black;
 }
