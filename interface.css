@@ -46,15 +46,25 @@ button:active {
 
 /*This changes the settings for the unordered list (ul), with the ID:'menu'*/
 ul#menu {
+    display: inline;
+	text-align:centre;
+	background:purple;
+	height:100%;
+	width:100%;
 }
 
 /*Changes the style of the list element inside ul#menu*/
 ul#menu li {
+	position:absolute;
+	list-style-type: none;
     display: inline;
-    background-color: black;
+	width:25%;
+	height:100%;
+    background-color: aqua;
     color: white;
     text-decoration: none;
-    border-radius: 6px;
+    border-radius: 5px;
+	vertical-align: bottom;
 }
 
 /*Changes the style of the list elements */
@@ -116,6 +126,16 @@ div#right_container {
 	overflow:hidden;
 	background:blue;
 }
+
+div#tab_container {
+	position:absolute;
+	top:0px;
+	left:0px;
+	right:0px;
+	height:60px;
+	background:red;
+}
+
 
 #donate{
 	display:none;
