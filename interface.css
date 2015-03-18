@@ -1,22 +1,22 @@
 /*Fixes the body of the code from breaking in HTML 5*/
 html, body, div, a, ul {
-  	margin:0;
-	padding:0;
-	border:0;
+  	margin: 0;
+	padding: 0;
+	border: 0;
 	font-size: 100%;
-	font:inherit;
-	vertical-align:baseline;
+	font: inherit;
+	vertical-align: baseline;
 }
 
 /*This is the state of the body*/
 /*This is the black box around the whole document*/
 body {
-	height:100%;
-	width:100%;
+	height: 100%;
+	width: 100%;
     background-color: lightblue;
-	margin:0px
+	margin: 0px;
 	min-height: 100%; /* for firefox */
-	overflow:hidden;
+	overflow: hidden;
 }
 
 /*This is the state of the span class*/
@@ -24,131 +24,128 @@ span {
     color: black;
 }
 
+/*---------------------------------------------------*/
+/*These are the settings for the big boxes on the main screen*/
+
+/*This is the style of the bar at the top of the page*/
+div#top_bar {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 30px;
+	background-color: #000000;
+	color: white;
+}
+
+/*This is the element that contains everything except the top box*/
+div#game {
+	position: absolute;
+	width: 100%;
+	top: 30px;
+	bottom: 0px;
+}
+
+/*The left container holds the store and items like that*/
+div#left_container {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 30%;
+	bottom: 0px;
+	min-width: 100px;
+	overflow: hidden;
+	background: green;
+}
+
+/*The middle container is the big one with most of the game in it*/
+div#middle_container {
+	position: absolute;
+	left: 30%;
+	top: 0px;
+	width: 40%;
+	bottom: 0px;
+	min-width: 100px;
+	overflow: hidden;
+	background: grey;
+}
+
+/*The right container doesnt have much in it at the moment*/
+div#right_container {
+	position: absolute;
+	left: 70%;
+	top: 0px;
+	width: 30%;
+	bottom: 0px;
+	min-width: 100px;
+	overflow: hidden;
+	background: deepskyblue;
+}
+
+div#tab_container {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	height: 60px;
+	background: red;
+}
+/*---------------------------------------------------*/
+
 /*This is the button*/
 button {
 	border: solid #000000 2px;
-	padding:3px 5px 3px 5px;
-	margin:2px;
+	padding: 3px 5px 3px 5px;
+	margin: 2px;
 	border-radius: 6px;
 }
 
 /*This is the state when you hover over a button*/
 button:hover {
-	background-color:#eee;
-	padding:2px 4px 2px 4px;
-	margin:3px
+	background-color: #eee;
+	padding: 2px 4px 2px 4px;
+	margin: 3px
 }
 
 /*This is the state when the button is pressed*/
 button:active {
-	background-color:#CFCFCF;
+	background-color: #CFCFCF;
 }
 
-/*This changes the settings for the unordered list (ul), with the ID:'menu'*/
-ul#menu {
-    display: inline;
-	text-align:centre;
-	background:purple;
-	height:100%;
-	width:100%;
+button:focus {
+	outline:0;
 }
 
-/*Changes the style of the list element inside ul#menu*/
-ul#menu li {
-	position:absolute;
-	list-style-type: none;
-    display: inline;
-	width:25%;
-	height:100%;
-    background-color: aqua;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-	vertical-align: bottom;
+button.tab {
+	margin: 0px;
+	display: inline;
+	float: left;
+	width: 25%;
+	height: 100%;
+	border: none;
+	border-radius: 0px;
 }
 
-/*Changes the style of the list elements */
-ul#menu li:hover {
-    background-color: orange;
+button.tab:active {
+	background-color: darkgrey;
 }
 
-/*This is the style of the bar at the top of the page*/
-div#top_bar {
-	position:absolute;
-	left:0px;
-	top:0px;
-	width:100%;
-	height:30px;
-	background-color:#000000;
-	color:white;
+button.tab:focus {
+	background-color: yellow;
 }
-
-/*This is the element that contains everything except the top box*/
-div#game {
-	position:absolute;
-	width:100%;
-	top:30px;
-	bottom:0px;
-}
-
-/*The left container holds the store and items like that*/
-div#left_container {
-	position:absolute;
-	left:0px;
-	top:0px;
-	width:30%;
-	bottom:0px;
-	min-width:100px;
-	overflow:hidden;
-	background:green;
-}
-
-/*The middle container is the big one with most of the game in it*/
-div#middle_container {
-	position:absolute;
-	left:30%;
-	top:0px;
-	width:40%;
-	bottom:0px;
-	min-width:100px;
-	overflow:hidden;
-	background:grey;
-}
-
-/*The right container doesnt have much in it at the moment*/
-div#right_container {
-	position:absolute;
-	left:70%;
-	top:0px;
-	width:30%;
-	bottom:0px;
-	min-width:100px;
-	overflow:hidden;
-	background:blue;
-}
-
-div#tab_container {
-	position:absolute;
-	top:0px;
-	left:0px;
-	right:0px;
-	height:60px;
-	background:red;
-}
-
 
 #donate{
-	display:none;
-	position:absolute;
-	top:0;
-	right:0;
-	border:1px solid black;
-	background-color:white;
-	z-index:2;
-	padding:5px;
-	text-align:middle;
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	border: 1px solid black;
+	background-color: white;
+	z-index: 2;
+	padding: 5px;
+	text-align: middle;
 }
 
 #donate p{
-	color:black;
+	color: black;
 }
