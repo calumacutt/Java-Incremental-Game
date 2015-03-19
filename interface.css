@@ -90,6 +90,31 @@ div#tab_container {
 	height: 60px;
 	background: red;
 }
+
+div.tab {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: blue;
+	display: none;
+}
+
+div.tab#id1 {
+	background-color: maroon;
+	display: block;
+}
+
+div.tab#id2 {
+	background-color: fuchsia;
+}
+
+div.tab#id3 {
+	background-color: limegreen;
+}
+
+div.tab#id4 {
+	background-color: deeppink;
+}
 /*---------------------------------------------------*/
 
 /*This is the button*/
