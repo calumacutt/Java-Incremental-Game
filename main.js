@@ -68,29 +68,15 @@ function donate(){
 	}
 }
 
-function toggletab1(){
-	document.getElementById('id2').style.display = "none";
-	document.getElementById('id3').style.display = "none";
-	document.getElementById('id4').style.display = "none";
+//Reveals and hides the different canvases. For the menu system.
+function toggletab(id){
+	var divs = document.getElementsByClassName("canvas");
+	for (var i=1 ; i<divs.length ; i+=1){
+		if (divs[i].id == id){
+			console.log(id);
+			divs[i].style.display = 'block';
+		} else {
+			divs[i].style.display = 'none';
+		}
+	}
 }
-
-function toggletab2(){
-	document.getElementById('id2').style.display = "block";
-	document.getElementById('id3').style.display = "none";
-	document.getElementById('id4').style.display = "none";
-}
-
-function toggletab3(){
-	document.getElementById('id2').style.display = "none";
-	document.getElementById('id3').style.display = "block";
-	document.getElementById('id4').style.display = "none";
-}
-
-function toggletab4(){
-	document.getElementById('id2').style.display = "none";
-	document.getElementById('id3').style.display = "none";
-	document.getElementById('id4').style.display = "block";
-}
-
-
-

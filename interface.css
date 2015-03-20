@@ -91,7 +91,7 @@ div#tab_container {
 	background: red;
 }
 
-div.tab {
+div.canvas {
 	position: absolute;
 	top:60px;
 	height: 100%;
@@ -100,20 +100,20 @@ div.tab {
 	display: none;
 }
 
-div.tab#id1 {
+div.canvas#id1 {
 	background-color: maroon;
 	display: block;
 }
 
-div.tab#id2 {
+div.canvas#id2 {
 	background-color: fuchsia;
 }
 
-div.tab#id3 {
+div.canvas#id3 {
 	background-color: limegreen;
 }
 
-div.tab#id4 {
+div.canvas#id4 {
 	background-color: deeppink;
 }
 /*---------------------------------------------------*/
