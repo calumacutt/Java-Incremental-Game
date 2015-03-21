@@ -1,5 +1,5 @@
 /*Fixes the body of the code from breaking in HTML 5*/
-html, body, div, a, ul {
+html, body, div, a, ul, p{
   	margin: 0;
 	padding: 0;
 	border: 0;
@@ -24,6 +24,17 @@ span {
     color: black;
 }
 
+/*This is the style of the 'Cash Clicker' box in the Top_Box*/
+p#title {
+	font-weight: bold;
+	text-align: center;
+}
+
+/*This is the style of the donate button on the right of the top_bar*/
+a#donate_link {
+	color: white;
+}
+
 /*---------------------------------------------------*/
 /*These are the settings for the big boxes on the main screen*/
 
@@ -37,36 +48,44 @@ div#top_bar {
 	background-color: #000000;
 }
 
+/*This is the style of the left sub-box in the top bar*/
 div#left_top_box {
 	position: absolute;
 	top: 0px;
 	bottom: 0px;
 	left: 0px;
 	right: 80%;
-	background-color: blue;
+	line-height: 30px;
+	background-color: black;
 	color: white;
+	padding-left: 10px;
 }
 
+/*This is the style of the middle sub-box in the top bar*/
 div#middle_top_box {
 	position: absolute;
-	top: 0px;
-	bottom: 0px;
-	left: 300px;
-	right: 300px;
-	background-color: magenta;
-	text-align: centre;
+	top: 0%;
+	bottom: 0%;
+	left: 30%;
+	right: 30%;
+	background-color: black;
+	line-height: 30px;
 	color: white;
+	min-width: 120px;
 }
 
+/*This is the style of the right sub-box in the top bar*/
 div#right_top_box {
 	position: absolute;
 	top: 0px;
 	bottom: 0px;
 	left: 80%;
 	right: 0px;
-	background-color: red;
+	line-height: 30px;
+	background-color: black;
 	text-align: right;
 	color: white;
+	padding-right: 10px;
 }
 
 /*This is the element that contains everything except the top box*/
@@ -113,6 +132,7 @@ div#right_container {
 	background: deepskyblue;
 }
 
+/*This box contains the 4 buttons that select the canvas*/
 div#tab_container {
 	position: absolute;
 	top: 0px;
@@ -121,7 +141,7 @@ div#tab_container {
 	height: 60px;
 	background: red;
 }
-
+/*This is the style of the canvas class*/
 div.canvas {
 	position: absolute;
 	top:60px;
@@ -130,7 +150,7 @@ div.canvas {
 	background-color: blue;
 	display: none;
 }
-
+/*The below 4 stylisations denote the style of the individual canvas's*/
 div.canvas#id1 {
 	background-color: maroon;
 	display: block;
@@ -169,10 +189,12 @@ button:active {
 	background-color: #CFCFCF;
 }
 
+/*This changes the look of buttons after they are selected by keyboard.*/
 button:focus {
 	outline:0;
 }
 
+/*These are the styles of the buttons used to select canvas's.*/
 button.tab {
 	margin: 0px;
 	display: inline;
@@ -191,18 +213,20 @@ button.tab:focus {
 	background-color: yellow;
 }
 
+/*This styles the pop-up donate box*/
 #donate{
 	display: none;
 	position: absolute;
 	top: 0;
 	right: 0;
-	border: 1px solid black;
+	border: 2px solid black;
 	background-color: white;
 	z-index: 2;
 	padding: 5px;
 	text-align: middle;
 }
 
+/*This styles the text inside the pop-up donate box.*/
 #donate p{
 	color: black;
 }
